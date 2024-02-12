@@ -4,35 +4,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 // import '../Components/All.css';
 import Slider from 'react-slick';
-import outdoor from '../Images/background_files/cricket-bat.png';
-import indoor from '../Images/background_files/table-tennis.png';
-import gym from '../Images/background_files/treadmill.png';
-import kids from '../Images/background_files/playground.png';
-import senior from '../Images/background_files/grandparents.png';
-import multi from '../Images/background_files/cinema.png';
-import security from '../Images/background_files/cctv.png';
-import yoga from '../Images/background_files/yoga-position.png';
-import garden from '../Images/background_files/park.png';
-import jogging from '../Images/background_files/jogging.png';
-import cardback from '../Images/cardback1.jpeg'
+import outdoor from '../Images/Amenities/swim.jpg';
+import spa from '../Images/Amenities/spa (1).jpg';
+import indoor from '../Images/Amenities/tennis.jpg';
+import gym from '../Images/Amenities/gym.jpg';
+import kids from '../Images/Amenities/kids.jpg';
+import senior from '../Images/Amenities/senior-320w.webp';
+import multi from '../Images/Amenities/ampi-320w.webp';
+import security from '../Images/Amenities/ref.jpg';
+import yoga from '../Images/Amenities/spa.jpg';
+import garden from '../Images/Amenities/garden.jpg';
+import jogging from '../Images/Amenities/walk-320w.webp';
+import Halls from '../Images/Amenities/Halls-320w.webp';
+import Footer from './Footer';
+import ContactSales from './ContactSales';
+import AboutFinwizz from './AboutFinwizz ';
+import Gallary from './Gallary';
+import Brouchers from './Brouchers'
+// import cardback from '../Images/cardback1.jpeg'
 
 export default function Amenities() {
   const amenitiesData = [
-    { image: outdoor, title: 'OUTDOOR GAMES' },
-    { image: indoor, title: 'INDOOR GAMES' },
-    { image: gym, title: 'GYMNASIUM' },
-    { image: kids, title: 'KIDS PLAY AREA' },
-    { image: senior, title: 'SENIOR CITIZEN ZONE' },
-    { image: multi, title: 'MULTIPURPOSE HALL' },
-    { image: security, title: 'SECURITY SYSTEM' },
-    { image: yoga, title: 'YOGA' },
-    { image: garden, title: 'GARDEN' },
-    { image: jogging, title: 'JOGGING TRACK' },
+    { image: outdoor, title: 'Swimming Pool' },
+    { image: spa, title: ' Amphiteater' },
+    { image: indoor, title: 'Squash Court' },
+    { image: gym, title: 'Fitness Center' },
+    { image: kids, title: 'Kids Pool' },
+    { image: senior, title: 'Senior Citizen Area' },
+    { image: multi, title: ' Multipurpose Hall' },
+    { image: security, title: 'Relaxation' },
+    { image: yoga, title: 'Salon And Spa' },
+    { image: garden, title: 'Tiered Landscape Garden' },
+    { image: Halls, title: 'Multipurpose Hall' },
     
   ];
 
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -73,7 +81,8 @@ function NextArrow({ onClick }) {
 }
 
   return (
-    <div className="container">
+    <>  
+    <div className="container" id='/amenities'>
       <div className="row">
         <h3 className="text-center mt-5 mb-2" style={{ color: "#dd0c2c" }}>
           Amenities
@@ -83,13 +92,19 @@ function NextArrow({ onClick }) {
       <div className="row" style={{}}>
         <Slider {...settings} >
           {amenitiesData.map((amenity, index) => (
-            <div key={index} className="card border border-black cardback  " style={{...cardback  , height:"15rem" }}>
-             <center> <img src={amenity.image} alt="" className="img-fluid my-5  " style={{height:"100px",width:"100px",textAlign:"center"}} /></center>
+            <div key={index} className="card border-none   " style={{ height:"15rem",border:"none" }}>
+             <center> <img src={amenity.image} alt="" className="img-fluid mb-5  " style={{height:"250px",width:"350px",textAlign:"center"}} /></center>
               <h5 style={{marginTop: "-40px",display:"flex", justifyContent:"center"  }}>{amenity.title} </h5>
             </div>
           ))}
         </Slider>
       </div>
     </div>
+    {/* <Gallary/>
+      <Brouchers/>
+      <AboutFinwizz/>
+    <ContactSales/>
+    <Footer/> */}
+    </>
   );
 }

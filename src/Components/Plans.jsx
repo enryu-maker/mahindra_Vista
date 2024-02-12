@@ -1,7 +1,7 @@
 import { useState } from 'react';
 //import React {useState}from 'react';
-import img1 from '../Images/2BHK-PRO-TOWER-A-6.webp';
-import img2 from '../Images/2BHK-PRO-TOWER-A-6.webp';
+import img1 from '../Images/3bhk-320w.webp';
+import img2 from '../Images/3bhk-320w (1).webp';
 import img3 from '../Images/2BHK-PRO-TOWER-A-6.webp';
 import { Modal, Button } from 'react-bootstrap';
 import { data } from './DummyData';
@@ -40,6 +40,7 @@ export default function Plans() {
 
     return (
         <>
+        <div id='/Plans'></div>
             <div>
                 <div className="container-fluid bg-light">
                     <h3 className='mt-5 pt-5 text-center' style={{ color: "#dd0c2c" }}>Vista Plans</h3>
@@ -48,8 +49,8 @@ export default function Plans() {
                         <div className="row" onClick={handlePhotoClick} >
                             {images.map((item, index) => (
                                 <div key={index} className="col-md-4 mb-5">
-                                    <img src={item.img} alt={`Image ${index + 1}`} className="img-fluid opacity-25 blureness" style={{ border: "1px solid black, position:relative" }} />
-                                    <button className='btn text-white text-center' style={{ backgroundColor: "#dd0c2c", zIndex: "1", marginTop: "-250px", width: "300px", height: "60px" }}>
+                                    <img src={item.img} alt={`Image ${index + 1}`} className="" style={{ border: "1px solid black, position:relative" ,width:"300px",height:"300px"}} />
+                                    <button className='btn text-white text-center' style={{ backgroundColor: "#dd0c2c", zIndex: "1", marginTop: "50px", width: "300px", height: "60px" }}>
                                         <i className="fa-solid fa-download fa-bounce me-3"></i>{item.btn}
                                     </button>
                                 </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import vistaimg from '../Images/vistaweb.jpg';
+import vistaimg from '../Images/Screenshot_1.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { data } from './DummyData';
 
@@ -39,39 +39,43 @@ export default function Home() {
                 <div className="goldenticket-capbox">
                   <div className="card-d card-d-custom" style={{ backgroundColor: '#EEEE', fontSize: '15px', padding: '10px 15px', justifyContent: 'center', display: 'flex', lineHeight: '26px', textAlign: 'left' }}>
                     <div>
-                      <span className="heading2 pe-4">Land Parcel </span><br />
+                      <span className="heading2 pe-4">Land Acres	</span><br />
                       <span className="heading1 "><b>{projectInfo.landParcel}</b></span>
                     </div>
 
                     <div>
-                      <span className="heading2 pe-4">Floors </span><br />
+                      <span className="heading2 pe-4">Towers </span><br />
                       <span className="heading1"><b>{projectInfo.floors}</b></span>
                     </div>
 
-                    <div>
+                    {/* <div>
                       <span className="heading2">Possession </span><br />
                       <span className="heading1"><b>{projectInfo.possession}</b></span>
-                    </div>
+                    </div> */}
                   </div>
 
-                  <div className="pre-launch-heading" style={{ fontSize: '15px', margin: '10px 0px 0px', padding: '5px', color: '#fff', backgroundColor: '#dd0c2c', fontWeight: 'bold' }}>
-                    {projectInfo.offerBonanza}
+                  <div className="pre-launch-heading" style={{ fontSize: '15px', margin: '0px 0px 0px', padding: '5px', color: '#fff', backgroundColor: '#dd0c2c', fontWeight: 'bold' }}>
+                   <p>{projectInfo.offerBonanza1}</p> 
+                   <p>{projectInfo.offerBonanza2}</p> 
+                   <p>{projectInfo.offerBonanza3}</p> 
+                   <p>{projectInfo.offerBonanza4}</p> 
                   </div>
                   <div className="pre-launch-content" style={{ color: '#171717', padding: '15px 10px', backgroundColor: '#EEE', fontWeight: 'bold', fontSize: '14px' }}>
                     <span className="animated bounceIn infinite" style={{ display: 'block', fontSize: '16px', lineHeight: '20px' }}>{projectInfo.specialPriceText}</span>
                   </div>
 
-                  <p style={{ margin: '5px 0 0px ', fontSize: '17px' }}><strong>Premium 1, 2,3 &amp; 4 BHK</strong> Starts</p>
-                  <h4 style={{ color: '#333', fontSize: '32px', fontWeight: 'bold' }}><strong>{projectInfo.startingPrice}</strong><br /></h4>Onwards
+                  <p style={{ margin: '5px 0 0px ', fontSize: '17px' }}>2 & 3 BHK Premium Residences Starts</p>
+                  <h4 style={{ color: '#333', fontSize: '32px', fontWeight: 'bold' }}><strong>{projectInfo.startingPrice}</strong><br /></h4>
                 </div>
-                <button style={{ color: '#fff', backgroundColor: '#dd0c2c', fontWeight: '600', boxShadow: '0px 8px 15px rgb(0 0 0 / 30%)' }} type="button" className="btn">{registrationForm.submitButtonText}</button>
-                <p className='py-4'>{projectInfo.reraNumber}</p>
+                <button style={{ color: '#fff', backgroundColor: '#dd0c2c', fontWeight: '600', boxShadow: '0px 8px 15px rgb(0 0 0 / 30%)' }} type="button" className="btn mb-2"  onClick={handlePhotoClick}>Express your Intrest</button>
+                {/* <p className='py-4'>{projectInfo.reraNumber}</p> */}
               </div>
             </div>
           </div>
         <div className="col-sm-4 text-center" style={{ position: 'relative' }}>
-          <img style={{ width: '100%' }} src={vistaimg} alt="" onClick={handlePhotoClick} />
+          <img style={{ width: '100%',height:"530px" }} src={vistaimg} alt=""className='' onClick={handlePhotoClick} />
           <Modal show={showModal} onHide={handleModalClose} centered>
+            <form action="https://formspree.io/f/{form_id}" method="post">
             <Modal.Header closeButton>
               <Modal.Title>{registrationForm.title}</Modal.Title>
             </Modal.Header>
@@ -122,10 +126,12 @@ export default function Home() {
                 }}
                 type="button"
                 onClick={handleModalClose}
+                // onClick={handlePhotoClick}
               >
                 {registrationForm.submitButtonText}
               </Button>
             </Modal.Body>
+            </form>
           </Modal>
         </div>
         <div className="col-md-4 text-center">
@@ -138,7 +144,7 @@ export default function Home() {
                 <input style={{ width: '100%', padding: '15px', border: '2px solid #dd0c2c', borderRadius: '8px', fontSize: '16px', color: '#fff', backgroundColor: '#000' }} type="text" placeholder={registrationForm.emailPlaceholder} />
               </div>
               <p  style={{ margin: '0px 0px 20px', fontSize: '14px', color: '#ddd' }}>{registrationForm.termsAndConditionsText}</p>
-              <button style={{ color: '#fff', backgroundColor: '#dd0c2c', fontWeight: '600', padding: '15px 120px', borderRadius: '8px', fontSize: '18px', boxShadow: '0px 8px 15px rgb(0 0 0 / 30%)' }} type="button" className="btn">{registrationForm.submitButtonText}</button>
+              <button style={{ color: '#fff', backgroundColor: '#dd0c2c', fontWeight: '600', padding: '10px 120px', borderRadius: '8px', fontSize: '18px', boxShadow: '0px 8px 15px rgb(0 0 0 / 30%)' }} type="button" className="btn">{registrationForm.submitButtonText}</button>
             </div>
           </div>
         </div>
@@ -150,12 +156,13 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-12 my-4">
               <h2 className="mb-4 text-center" style={{ color: '#dd0c2c', backgroundColor: '#f1f1f1' }}>{projectDetails.title}</h2>
+              <h4 className="mb-4 text-center" style={{ color: '#dd0c2c', backgroundColor: '#f1f1f1' }}>{projectDetails.title1}</h4>
               <p className="lead" style={{ textAlign: 'left', fontSize: '16px' }}>{projectDetails.description}</p>
             </div>
           </div>
           <div className="text-center my-3">
             {/* <a href="#" className={`btn btn-lg ${projectDetails.buttonColor}`}><i className={`fa-solid fa-${projectDetails.buttonIcon} fa-bounce`}></i> &nbsp;{projectDetails.buttonText}</a> */}
-            <button className="btn text-white shadow my-5  py-3" style={{ backgroundColor: "#dd0c2c", width:"300px"}}><i class="fa-solid fa-download fa-bounce me-3"></i> DOWNLOAD BROUCHERS</button>
+            <button className="btn text-white shadow my-5  py-3"   onClick={handlePhotoClick} style={{ backgroundColor: "#dd0c2c", width:"300px"}}><i class="fa-solid fa-download fa-bounce me-3"></i> Express Your intrest</button>
           </div>
         </div>
       </div>
@@ -166,6 +173,7 @@ export default function Home() {
       <Brouchers/>
       <Amenities/>
       <Location/> 
+      
     </>
   );
 }

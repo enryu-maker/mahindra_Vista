@@ -9,11 +9,7 @@ export default function AboutFinwizz() {
                     <div className='line'></div>
 
                     <div>
-                        <p className='mx-5 justify-content-center my-5'>Finwizz Holdings is a property advisory company based in Mumbai, India.
-                             It is one of the fastest-growing tech-enabled companies in the organized real estate industry.
-                              We are a team of professionals who deal in residential and commercial properties all over India.
-                               Our services include the sale & purchase of residential and commercial properties.
-                                Finwizz Holdings is dedicated to simplifying home-buying and ensuring reliable, trustworthy, and hassle-free real estate transactions to our trusted partner brands and helping them effectively reach their target audience through transparent and efficient promotion.
+                        <p className='mx-5 justify-content-center my-5'>MakeMyProperty is more than a real estate agency; we are a community of passionate professionals united by a common goal – to simplify and enrich the process of buying and selling properties. Our team brings together expertise in real estate, market trends, and client service to provide you with a comprehensive and unparalleled experience.
                             Finwizz Holdings RERA No – A51800018907</p>
                     </div>
                 </div>

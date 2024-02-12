@@ -5,15 +5,15 @@ export default function ContactSales() {
     
     return (
         <div>
-            <div className="container-fluid" style={{ backgroundColor: "#dd0c2c" }}>
+            <div className="container" style={{ backgroundColor: "#dd0c2c" }}>
                 <div className="container">
                     <div className="row">
                         <h3 className='text-center text-white mt-5 mb-4'> Contact Sales Offices</h3>
                         {/* <div className='line1 text-center mb-5'></div> */}
                         <div className="col-md-6">
-                           <div> <p className='text-white my-2 mx-3'><i className="fa-solid fa-location-arrow fa-xl fw-bolder"></i> Kandivali West, Mumbai, Maharashtra</p></div>
-                           <div> <p  className='text-white my-2 mx-3'><i class="fa-solid fa-earth-americas fa-xl me-3"></i>vista-kandivli.in</p></div>
-                          <div>  <p className='text-white my-2 mx-3'><i class="fa-solid fa-phone fa-xl"></i>+919967155511</p></div>
+                           <div> <p className='text-white my-2 mx-3'><i className="fa-solid fa-location-arrow fa-xl fw-bolder mt-5"></i> Kandivali West, Mumbai, Maharashtra</p></div>
+                           <div> <p  className='text-white my-2 mx-3'><i class="fa-solid fa-earth-americas fa-xl me-3 mt-5" ></i>vista-kandivli.in</p></div>
+                          <div>  <p className='text-white my-2 mx-3 mt-5'><i class="fa-solid fa-phone fa-xl "></i>+919967155511</p></div>
                         </div>
                         
                         <div className="col-md-6 text-center">

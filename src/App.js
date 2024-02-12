@@ -20,6 +20,7 @@ import Location from './Components/Location'
 import Footer from './Components/Footer';
 import Navigations from './Navigations'
 import { Routes,Route} from 'react-router-dom';
+import Thankspage from './Components/Thankspage';
 function App() {
   return (
     <>
@@ -31,14 +32,15 @@ function App() {
       <Route  path='/Plans' element={<Plans/>}/>
       <Route  path='/Location' element={<Location/>}/>
       <Route  path='/Video' element={<Videoo/>}/>
-      <Route  path='/Amenities' element={ <Amenities/>}/>
+      <Route  path='/amenities' element={ <Amenities/>}/>
+      <Route  path='/Thanks' element={ <Thankspage/>}/>
+      <Route  path='/Thanks' element={ <Thankspage/>}/>
+      <Route  path='/Thanks' element={ <Thankspage/>}/>
+      <Route  path='/Thanks' element={ <Thankspage/>}/>
       </Routes>
       {/* <Navigations/> */}
-      <Gallary/>
-      <Brouchers/>
-      <AboutFinwizz/>
-    <ContactSales/>
-    <Footer/>
+      
+    
 
       
     

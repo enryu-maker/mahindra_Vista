@@ -1,11 +1,7 @@
-
-
-
-
-
 import React from 'react';
-import logo from '../Images/Mahindra-Vista-Logo-Finwizz-PSD.webp';
-import { Link } from 'react-router-dom';
+import logo1 from '../Images/logo1.svg';
+
+import { Link } from 'react-scroll';
 
 export default function Navbar() {
   return (
@@ -13,7 +9,9 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg " style={{ backgroundColor: "white" }}>
         <div className="container-fluid">
-          <img src={logo} alt="" height={70} width={250} />
+         
+          <img src={logo1} alt="" height={70} width={250} />
+
 
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -24,19 +22,19 @@ export default function Navbar() {
                 <a className="nav-link active text-dark " aria-current="page" to="#" style={{ fontSize: "15px", borderRight: "1px black solid" }}>ABOUT US</a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/Amenities" style={{ fontSize: "15px", borderRight: "1px black solid" }}>AMENITIES</Link>
+                <Link className="nav-link text-dark" to="/amenities" smooth={true} offset={-100} duration={100} style={{ fontSize: "15px", borderRight: "1px black solid" }}>AMENITIES</Link>
               </li>
               <li className="nav-item ">
-                <Link className="nav-link text-dark" to="/Video" style={{ fontSize: "15px", borderRight: "1px black solid" }}>VIDEO</Link>
+                <Link className="nav-link text-dark" to="/Video" smooth={true} offset={-200} duration={100} style={{ fontSize: "15px", borderRight: "1px black solid" }}>VIDEO</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/Location" style={{ fontSize: "15px", borderRight: "1px black solid" }}>LOCATION</Link>
+                <Link className="nav-link text-dark" to="/Location" smooth={true} offset={120} duration={130} style={{ fontSize: "15px", borderRight: "1px black solid" }}>LOCATION</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/Plans" style={{ fontSize: "15px", borderRight: "1px black solid" }}>PLANS</Link>
+                <Link className="nav-link text-dark" to="/Plans" smooth={true} offset={-50} duration={130} style={{ fontSize: "15px", borderRight: "1px black solid" }}>PLANS</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/PriceList" style={{ fontSize: "15px", borderRight: "1px black solid" }}>PRICE LIST</Link>
+                <Link className="nav-link text-dark" to="/PriceList" smooth={true} offset={-50} duration={130} style={{ fontSize: "15px", borderRight: "1px black solid" }}>PRICE LIST</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link text-dark" to="/PriceList" style={{ fontSize: "15px", borderRight: "1px black solid" }}>OFFER</Link>
@@ -44,7 +42,7 @@ export default function Navbar() {
               <li className="nav-item">
                 <Link className="nav-link text-dark" to="#" style={{ fontSize: "15px", borderRight: "1px black solid" }}>SITE VISIT</Link>
               </li>
-              <li className="nav-item dropdown" >
+              {/* <li className="nav-item dropdown" >
                 <a className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ fontSize: "15px", borderRight: "1px black solid" }}>
                   MORE
                 </a>
@@ -53,9 +51,9 @@ export default function Navbar() {
                   <li><a className="dropdown-item" to="#" style={{ fontSize: "15px" }}>VIDEO WALK THROUGH</a></li>
                   <li><a className="dropdown-item" to="#" style={{ fontSize: "15px" }}>CONTACT SALES</a></li>
                 </ul>
-              </li>
+              </li> */}
             </ul>
-            <div className='ms-2 ms-lg-5' style={{ paddingLeft: "0" }}><button className='btn btn-outline-dark bg-dark text-white ' >9967155511</button></div>
+            <div className='ms-2 ms-lg-5' style={{ paddingLeft: "0" }}><button className='btn btn-outline-dark bg-dark text-white ' >9916836584</button></div>
           </div>
         </div>
       </nav>

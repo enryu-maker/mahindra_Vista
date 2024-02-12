@@ -1,81 +1,6 @@
-
-
-
-
-
-
-// import React from 'react';
-// import './All.css'
-// import { priceList  } from './DummyData';
-// // import Home from './Home';
-
-// export default function PriceList() {
-
-    
-//     // const priceList = [
-//     //     {
-//     //         flatSize: "1 BHK",
-//     //         sqFeet: "433 sq.ft.",
-//     //         price: "1.23 Cr(All Inc)"
-//     //     },
-//     //     {
-//     //         flatSize: "2 BHK",
-//     //         sqFeet: "600-700 sq.ft.",
-//     //         price: "1.70 Cr(All Inc)"
-//     //     },
-//     //     {
-//     //         flatSize: "3 BHK",
-//     //         sqFeet: "934-1061 sq.ft.",
-//     //         price: "2.64 Cr(All Inc)"
-//     //     },
-//     //     {
-//     //         flatSize: "4 BHK",
-//     //         sqFeet: "1620 sq.ft.",
-//     //         price: "4.58 Cr(All Inc)"
-//     //     },
-//     // ];
-// {/* <Home/> */}
-//     return (
-//         <div>
-//             <div className="container-fluid backgroundImg">
-//                 <h3 className='text-center fw-bolder mt-5 ' style={{color:"#dd0c2c"}}>Mahindra Kandivli Price List</h3>
-//                 <div className='line'></div>
-//                 <div className="container"> 
-//                     <div className="row mt-5">
-//                         {priceList.map((item, index) => (
-//                             <div className={`col-md-4${index === priceList.length - 1 ? ' offset-md-4' : ''}`} key={index}>
-//                                 <div className="card text-center mb-3 ms-4">
-//                                     <div className="card-body mt-3">
-//                                         <h5 className="card-title fw-bold mt-1">{item.flatSize}</h5>
-//                                         <p className="card-text fw-bold mt-3"> {item.sqFeet}</p>
-//                                         <p className="card-text fw-bold mt-3"><i className="fa-sharp fa-solid fa-indian-rupee-sign"></i> {item.price}</p>
-//                                         <a  href="#" className="btn mt-3 text-white" style={{backgroundColor:"#dd0c2c"}}>DOWNLOAD PRICE SHEET</a>
-//                                     </div>
-//                                 </div>
-//                             </div>
-//                         ))}
-//                     </div>
-//                 </div>
-//             </div>
-
-
-
-
-
-
-//         </div>
-//     );
-// }
-
-
-
-
-
-
-
-//import React from 'react';
 import './All.css'
 import { priceList ,data } from './DummyData';
+import img from '../Images/pricelist.webp'
 import { Modal, Button, Form } from 'react-bootstrap';
 import { useState } from 'react';
 
@@ -117,23 +42,25 @@ export default function PriceList() {
     // ];
 {/* <Home/> */}
     return (
-        <div>
+        <div id='/PriceList'>
             <div className="container-fluid backgroundImg">
                 <h3 className='text-center fw-bolder mt-5 ' style={{color:"#dd0c2c"}}>Mahindra Kandivli Price List</h3>
                 <div className='line'></div>
                 <div className="container"> 
                     <div className="row mt-5">
                         {priceList.map((item, index) => (
-                            <div className={`col-md-4${index === priceList.length - 1 ? ' offset-md-4' : ''}`} key={index}>
-                                <div className="card text-center mb-3 ms-4">
+                            <div className="col-md-4 " key={index}>
+                                <div className="card text-center mb-3 ">
                                     <div className="card-body mt-3">
                                         <h5 className="card-title fw-bold mt-1">{item.flatSize}</h5>
                                         <p className="card-text fw-bold mt-3"> {item.sqFeet}</p>
                                         <p className="card-text fw-bold mt-3"><i className="fa-sharp fa-solid fa-indian-rupee-sign"></i> {item.price}</p>
-                                        <a   onClick={handlePhotoClick} className="btn mt-3 text-white" style={{backgroundColor:"#dd0c2c"}}>DOWNLOAD PRICE SHEET</a>
+                                        <a   onClick={handlePhotoClick} className="btn mt-3 text-white" style={{backgroundColor:"#dd0c2c"}}>Express your Intrest</a>
                                     </div>
                                 </div>
+                                <div><img src={img} alt="" /></div>
                             </div>
+                            
                         ))}
                     </div>
                 </div>
