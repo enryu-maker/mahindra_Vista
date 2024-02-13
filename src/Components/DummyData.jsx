@@ -16,7 +16,7 @@ const data = {
     registrationForm: {
       title: 'Express your intrest',
       namePlaceholder: 'Your Name',
-      emailPlaceholder: 'Your Email',
+      emailPlaceholder: 'Your Phone Number',
       submitButtonText: 'Express your intrest',
       termsAndConditionsText: 'By Clicking Submit, I Accept The Terms & Conditions',
     },
@@ -47,7 +47,7 @@ const data = {
     We all possible measures to avoid any misrepresenration but makes no warranties as to the content and information accuracy. While reasonable efforts are being made to ensure the authenticity and completeness of the Information displayed here and the same is updated at regular intervals there is a possibility that the information displayed may not be current and incomplete.
     Please make sure you verify all the details from the actual site office or from the RERA website before making any decision in relation to the purchase of the properties.
     We accept no liability for the content of this website content, or for the consequences of any actions taken on the basis of this website or content. Property Prices, location map image, master plan image, opinion/suggestions provided in this mail are subject to change without notice and shall in no way make us responsible for any loss/damages caused to the users/members.`,
-    Disclaimer:"Disclaimer : The information provided on this website is intended exclusively for informational purposes and should not be construed as an offer of services. This site is managed by a RERA authorized real estate agent namely Propertypistol Realty Private Limited. The pricing information presented on this website is subject to alteration without advance notification, and the assurance of property availability cannot be guaranteed. The images showcased on this website are for representational purposes only and may not accurately reflect the actual properties.",
+    Disclaimer:"The information provided on this website is intended exclusively for informational purposes and should not be construed as an offer of services. This site is managed by a RERA authorized real estate agent namely Propertypistol Realty Private Limited. The pricing information presented on this website is subject to alteration without advance notification, and the assurance of property availability cannot be guaranteed. The images showcased on this website are for representational purposes only and may not accurately reflect the actual properties. We may share your data with Real Estate Regulatory Authority (RERA) registered Developers for further processing as necessary. Additionally, we may send updates and information to the mobile number or email address registered with us. All rights reserved. The content, design, and information on this website are protected by copyright and other intellectual property rights. Any unauthorized use or reproduction of the content may violate applicable laws.For accurate and up-to-date information regarding services, pricing, availability, and any other details, it is recommended to contact us directly through the provided contact information on this website. Thank you for visiting our website.",
     para:'Contact us at – 2nd Floor, Arjun Building, Plot No – 6A, Vitthalbhai Patel Rd, Kalyangram Society, Lohana Colony, Andheri West, Mumbai 400058'  ,
 agentNo:'Agent Maha RERA No. – A51700000043',
 projectNo:'Project Maha RERA – COMING SOON'

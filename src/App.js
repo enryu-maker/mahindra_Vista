@@ -34,9 +34,8 @@ function App() {
       <Route  path='/Video' element={<Videoo/>}/>
       <Route  path='/amenities' element={ <Amenities/>}/>
       <Route  path='/Thanks' element={ <Thankspage/>}/>
-      <Route  path='/Thanks' element={ <Thankspage/>}/>
-      <Route  path='/Thanks' element={ <Thankspage/>}/>
-      <Route  path='/Thanks' element={ <Thankspage/>}/>
+      <Route  path='/about' element={ <AboutFinwizz/>}/>
+      
       </Routes>
       {/* <Navigations/> */}
       

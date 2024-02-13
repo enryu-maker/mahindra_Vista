@@ -110,7 +110,7 @@ export default function Home() {
                     color: '#000',
                     backgroundColor: '#fff',
                   }}
-                  type="text"
+                  type="tel" minLength={10} maxLength={10}
                   placeholder={registrationForm.emailPlaceholder}
                 />
               </div>
