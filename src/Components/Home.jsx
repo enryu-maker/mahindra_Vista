@@ -11,6 +11,9 @@ import Gallary from './Gallary';
 import Brouchers from './Brouchers';
 import Location from './Location';
 import Amenities from './Amenities';
+import AboutFinwizz from './AboutFinwizz ';
+import ContactSales from './ContactSales';
+import Footer from './Footer';
 
 export default function Home() {
   const { registrationForm, projectInfo , projectDetails } = data;
@@ -170,9 +173,13 @@ export default function Home() {
       <PriceList/>
       <Plans/>
       <Videoo/>
+    <Amenities/>
+      <Gallary/>
       <Brouchers/>
-      <Amenities/>
       <Location/> 
+      <AboutFinwizz/>
+      <ContactSales/>
+      <Footer/>
       
     </>
   );
