@@ -1,5 +1,6 @@
 import { useState } from 'react';
 //import React {useState}from 'react';
+import axios from 'axios'
 import img1 from '../Images/3bhk-320w.webp';
 import img2 from '../Images/3bhk-320w (1).webp';
 import img3 from '../Images/2BHK-PRO-TOWER-A-6.webp';
@@ -11,6 +12,30 @@ export default function Plans() {
   const { registrationForm, projectInfo, projectDetails } = data;
 
   const [showModal, setShowModal] = useState(false);
+
+  async function sendEnquiry() {
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+
+    try {
+      const response = await axios.post("https://formspree.io/f/mvoegweb", {
+        name,
+       phone,
+        // Add other form data as needed
+      });
+
+      if (response.status === 200) {
+        alert("Done");
+        console.log('Success!', response.status);
+      } else {
+        console.log('Unexpected response:', response);
+        alert("Error");
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert("Error");
+    }
+  }
 
   const handleModalClose = () => {
     setShowModal(false);
@@ -34,7 +59,7 @@ export default function Plans() {
     },
     {
       img: img3,
-      btn: "VIEW 4 BHK PLAN"
+      btn: "VIEW MASTER PLAN"
     },
   ];
 
@@ -83,6 +108,7 @@ export default function Plans() {
                   backgroundColor: '#fff',
                 }}
                 type="text"
+                id='name'
                 placeholder={registrationForm.namePlaceholder}
               />
             </div>
@@ -97,7 +123,8 @@ export default function Plans() {
                   color: '#000',
                   backgroundColor: '#fff',
                 }}
-                type="text"
+                type="tel" minLength={10} maxLength={10}
+                id='phone'
                 placeholder={registrationForm.emailPlaceholder}
               />
             </div>
@@ -115,7 +142,7 @@ export default function Plans() {
                 boxShadow: '0px 8px 15px rgb(0 0 0 / 30%)',
               }}
               type="button"
-              onClick={handleModalClose}
+              onClick={sendEnquiry}
             >
               {registrationForm.submitButtonText}
             </Button>

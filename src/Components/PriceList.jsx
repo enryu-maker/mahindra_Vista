@@ -1,5 +1,6 @@
 import './All.css'
 import { priceList ,data } from './DummyData';
+import axios from 'axios'
 import img from '../Images/pricelist.webp'
 import { Modal, Button, Form } from 'react-bootstrap';
 import { useState } from 'react';
@@ -17,6 +18,30 @@ export default function PriceList() {
       const handlePhotoClick = () => {
         setShowModal(true);
       };
+
+      async function sendEnquiry() {
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+    
+        try {
+          const response = await axios.post("https://formspree.io/f/mvoegweb", {
+            name,
+           phone,
+            // Add other form data as needed
+          });
+    
+          if (response.status === 200) {
+            alert("Done");
+            console.log('Success!', response.status);
+          } else {
+            console.log('Unexpected response:', response);
+            alert("Error");
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          alert("Error");
+        }
+      }
 
     // const priceList = [
     //     {
@@ -86,6 +111,7 @@ export default function PriceList() {
                     backgroundColor: '#fff',
                   }}
                   type="text"
+                  id='name'
                   placeholder={registrationForm.namePlaceholder}
                 />
               </div>
@@ -100,7 +126,8 @@ export default function PriceList() {
                     color: '#000',
                     backgroundColor: '#fff',
                   }}
-                  type="text"
+                  type="tel" minLength={10} maxLength={10}
+                  id='phone'
                   placeholder={registrationForm.emailPlaceholder}
                 />
               </div>
@@ -118,7 +145,7 @@ export default function PriceList() {
                   boxShadow: '0px 8px 15px rgb(0 0 0 / 30%)',
                 }}
                 type="button"
-                onClick={handleModalClose}
+                onClick={sendEnquiry}
               >
                 {Broucher.submitButtonText}
               </Button>

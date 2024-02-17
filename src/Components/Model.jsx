@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
-import axios from 'axios'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react'
 import { data } from './DummyData';
-import { useNavigate } from 'react-router-dom';
-import { animateScroll as scroll } from 'react-scroll';
 
-export default function Home() {
-  const { registrationForm } = data;
-  const navigate = useNavigate();
+import { Modal, Button } from 'react-bootstrap';
+
+export default function Model() {
+  const { registrationForm, projectInfo, projectDetails } = data;
+
   const [showModal, setShowModal] = useState(false);
-
+  
   async function sendEnquiry() {
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
@@ -39,49 +36,20 @@ export default function Home() {
     setShowModal(false);
   };
 
-  const handleGetBrochureClick = () => {
+  const handlePhotoClick = () => {
     setShowModal(true);
   };
-
-  const scrollToTop = () => {
-    scroll.scrollToTop({
-      duration: 500,
-      smooth: 'easeInOutQuart',
-    });
-  };
-
-  const handleSubmit = () => {
-    
-    setShowModal(false);
-
-   
-    scrollToTop();
-
-    
-    navigate('/Thanks');
-  };
-
   return (
-    <>
-    <div className="container">
-      <div className="row d-flex justify-content-center">
-        <button
-          className="btn text-white shadow my-5 py-3"
-          style={{ backgroundColor: "#dd0c2c", width: "300px" }}
-          onClick={handleGetBrochureClick}
-        >
-          <i className="fa-solid fa-download fa-bounce me-3 pe-3"></i> GET BROCHURES
-        </button>
-      </div>
-      </div>
-
+    <div>
       <Modal show={showModal} onHide={handleModalClose} centered>
+        {/* <form action="https://formspree.io/f/{form_id}" method="post"> */}
         <Modal.Header closeButton>
           <Modal.Title>{registrationForm.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <div style={{ margin: '0px 0px 20px' }}>
-           <input
+
+          <div style={{ margin: '0px 0px 20px' }}>
+            <input
               style={{
                 width: '100%',
                 padding: '15px',
@@ -92,7 +60,6 @@ export default function Home() {
                 backgroundColor: '#fff',
               }}
               type="text"
-              
               id='name'
               placeholder={registrationForm.namePlaceholder}
             />
@@ -127,12 +94,14 @@ export default function Home() {
               boxShadow: '0px 8px 15px rgb(0 0 0 / 30%)',
             }}
             type="button"
-            // onClick={()=>navigate("/Thanks")}
-            onClick={sendEnquiry}>
+            // onClick={handleModalClose}
+            onClick={sendEnquiry}
+          >
             {registrationForm.submitButtonText}
           </Button>
         </Modal.Body>
-      </Modal>
-    </>
-  );
+      {/* </form> */}
+    </Modal>
+    </div >
+  )
 }

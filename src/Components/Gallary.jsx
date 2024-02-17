@@ -41,7 +41,7 @@ export default function Gallary() {
 
     function PrevArrow({ onClick }) {
         return (
-            <button className="slick-arrow slick-prev rounded-circle " onClick={onClick}  style={{ background: "#dd0c2c",display:"block", height:"50px",width:"50px",zIndex:"1", position:"absolute" }}>
+            <button className="slick-arrow slick-prev rounded-circle " onClick={onClick}  style={{ background: "#dd0c2c",display:"block", height:"50px",width:"50px",zIndex:"1", position:"absolute",marginLeft: "3px"  }}>
                 <FontAwesomeIcon icon={faChevronLeft} />
             </button>
         );
@@ -49,7 +49,7 @@ export default function Gallary() {
 
     function NextArrow({ onClick }) {
         return (
-            <button className="slick-arrow slick-next rounded-circle "  onClick={onClick} style={{ background: "#dd0c2c",display:"block", height:"50px",width:"50px" }}>
+            <button className="slick-arrow slick-next rounded-circle "  onClick={onClick} style={{ background: "#dd0c2c",display:"block", height:"50px",width:"50px",marginRight:"5px" }}>
                 <FontAwesomeIcon icon={faChevronRight} />
             </button>
         );

@@ -24,6 +24,9 @@ import Brouchers from './Brouchers'
 // import cardback from '../Images/cardback1.jpeg'
 
 export default function Amenities() {
+  const card={
+    border:"none"
+  }
   const amenitiesData = [
     { image: outdoor, title: 'Swimming Pool' },
     { image: spa, title: ' Amphiteater' },
@@ -74,7 +77,7 @@ export default function Amenities() {
 
 function NextArrow({ onClick }) {
     return (
-        <button className="slick-arrow slick-next rounded-circle "  onClick={onClick} style={{ background: "#dd0c2c",display:"block", height:"50px",width:"50px",marginRight:"24px" }}>
+        <button className="slick-arrow slick-next rounded-circle "  onClick={onClick} style={{ background: "#dd0c2c",display:"block", height:"50px",width:"50px",marginRight:"26px" }}>
             <FontAwesomeIcon icon={faChevronRight} />
         </button>
     );
@@ -92,7 +95,7 @@ function NextArrow({ onClick }) {
       <div className="row" style={{}}>
         <Slider {...settings} >
           {amenitiesData.map((amenity, index) => (
-            <div key={index} className="card border-none   " style={{ height:"15rem",border:"none" }}>
+            <div key={index} className="card border-none   " style={{...card, height:"15rem",border:"none" }}>
              <center> <img src={amenity.image} alt="" className="img-fluid mb-5  " style={{height:"250px",width:"350px",textAlign:"center"}} /></center>
               <h5 style={{marginTop: "-40px",display:"flex", justifyContent:"center"  }}>{amenity.title} </h5>
             </div>
