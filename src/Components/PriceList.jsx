@@ -5,8 +5,6 @@ import img from '../Images/pricelist.webp'
 import { Modal, Button, Form } from 'react-bootstrap';
 import { useState } from 'react';
 
-// import Home from './Home';
-
 export default function PriceList() {
 
     const { registrationForm, projectInfo , projectDetails, Broucher } = data;
@@ -27,7 +25,7 @@ export default function PriceList() {
           const response = await axios.post("https://formspree.io/f/mvoegweb", {
             name,
            phone,
-            // Add other form data as needed
+           
           });
     
           if (response.status === 200) {
@@ -69,7 +67,7 @@ export default function PriceList() {
     return (
         <div id='/PriceList'>
             <div className="container-fluid backgroundImg">
-                <h3 className='text-center fw-bolder mt-5 ' style={{color:"#dd0c2c"}}>Mahindra Kandivli Price List</h3>
+                <h3 className='text-center fw-bolder mt-5 ' style={{color:"#dd0c2c"}}>BigBull Kandivli Price List</h3>
                 <div className='line'></div>
                 <div className="container"> 
                     <div className="row mt-5">

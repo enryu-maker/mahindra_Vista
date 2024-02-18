@@ -57,13 +57,13 @@ export default function Gallary() {
 
     return (
         <div>
-            <div className="container-fluid">
+            <div className="container-fluid py-5">
                 <div className="container">
                     <div className="row">
-                        <h3 className="text-center mt-5" style={{ color: '#dd0c2c' }}>
+                        {/* <h3 className="text-center mt-5" style={{ color: '#dd0c2c' }}>
                             Vista Gallery
                         </h3>
-                        <div className="line mb-5"></div>
+                        <div className="line mb-5"></div> */}
                         <div className="slider-container " style={{ width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
                             <Slider {...settings}>
                                 <div >

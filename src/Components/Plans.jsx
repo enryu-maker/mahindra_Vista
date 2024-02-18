@@ -68,9 +68,9 @@ export default function Plans() {
       <div id='/Plans'></div>
       <div>
         <center>
-          <div className="container-fluid bg-light">
-            <h3 className='mt-5 pt-5 text-center' style={{ color: "#dd0c2c" }}>Vista Plans</h3>
-            <div className='line mb-5'></div>
+          <div className="container-fluid bg-light py-5">
+            {/* <h3 className='mt-5 pt-5 text-center' style={{ color: "#dd0c2c" }}>Vista Plans</h3> */}
+            {/* <div className='line mb-5'></div> */}
             <div className="container ">
               <div className="row" onClick={handlePhotoClick} >
                 {images.map((item, index) => (
