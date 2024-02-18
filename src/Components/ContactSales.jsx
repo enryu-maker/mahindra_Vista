@@ -38,7 +38,7 @@ export default function ContactSales() {
             {/* <div className='line1 text-center mb-5'></div> */}
             <div className="col-md-6">
               <div> <p className='text-white my-2 mx-3'><i className="fa-solid fa-location-arrow fa-xl fw-bolder mt-5"></i> Kandivali West, Mumbai, Maharashtra</p></div>
-              <div> <p className='text-white my-2 mx-3'><i class="fa-solid fa-earth-americas fa-xl me-1 mt-5" ></i>bigbull-kandivali.makemyproperty.co.in</p></div>
+              <div> <p className='text-white my-2 mx-3'><i class="fa-solid fa-earth-americas fa-xl me-1 mt-5" ></i>bigbull-kandivali.makemyproperties.co.in</p></div>
               <div>  <p className='text-white my-2 mx-3 mt-5'><i class="fa-solid fa-phone fa-xl "></i>+919029263511</p></div>
             </div>
 
